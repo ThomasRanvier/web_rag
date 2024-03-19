@@ -1,4 +1,4 @@
-# Implementation of RAG with web search using Mistral 7B
+# Implementation of RAG with WEB search using Mistral 7B
 
 ## Introduction
 
@@ -75,11 +75,11 @@ After successfully starting the services, open [http://localhost:8081](http://lo
 
 ## Results
 
-The following GIF shows the 4x sped up execution of the application for the query "What is GROK and what are the latest news about it?". Grok is the LLM of the company xAI, owned by Musk, which released the 314B weights of the model on the 17th of march 2024.
+The following GIF shows the 4x sped-up execution of the application for the query "What is GROK and what are the latest news about it?" on the 19th of March 2024. Grok is the LLM of the company xAI, owned by Musk, which released the 314B weights of the model on the 17th of March 2024.
 
 As can be seen, the model answers the question quite well, all given information is correct for points 1 to 4.
 
-However, the informations detailed in items 5 and 6 are incorrect. Upon further examination, it appears that the model did not hallucinate, but simply relayed erroneous informations found in the last retrieved link to the daily.dev website, where the content of the article is simply false and/or very outdated. This shows a limitation of such application, a "small" LLM such as Mistral 7B is limited in its context size and its analysis and might not be able to detect contradictory information within its context.
+However, the information detailed in items 5 and 6 is incorrect. Upon further examination, it appears that the model did not hallucinate, but simply relayed erroneous information found in the last retrieved link to the daily.dev website, where the content of the article is simply false and/or very outdated. This shows a limitation of such application, a "small" LLM such as Mistral 7B is limited in its context size and its analysis and might not be able to detect contradictory information within its context.
 
 ![GIF showing the application running](assets/speedup_webrag_grok.gif)
 

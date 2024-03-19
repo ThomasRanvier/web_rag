@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  web-rag-backend:
+    container_name: web-rag-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend/hf_home:/hf_home
+    ports:
+      - '8080:8080'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  web-rag-frontend:
+    container_name: web-rag-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - '8081:8081'
+    depends_on:
+      - web-rag-backend

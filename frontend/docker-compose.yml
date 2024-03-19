@@ -1,0 +1,18 @@
+version: '3.8'
+
+networks:
+  backend_prod_net:
+    external: true
+
+services:
+  web-rag-frontend:
+    container_name: web-rag-frontend
+
+    build:
+      context: .
+    
+    ports:
+      - '8081:8081'
+
+    networks:
+      - backend_prod_net

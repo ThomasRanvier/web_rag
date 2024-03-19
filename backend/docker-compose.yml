@@ -1,0 +1,29 @@
+version: '3.8'
+
+networks:
+  prod_net:
+    driver: bridge
+
+services:
+  web-rag-backend:
+    container_name: web-rag-backend
+
+    build:
+      context: .
+
+    volumes:
+      - ./hf_home:/hf_home
+
+    ports:
+      - '8080:8080'
+
+    networks:
+      - prod_net
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

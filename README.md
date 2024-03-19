@@ -28,8 +28,8 @@ This implementation focuses on providing enriched answers by retrieving relevant
 1. **Clone the Repository**
 
 ```bash
-git clone <repository-url>
-cd simple_rag
+git clone https://github.com/ThomasRanvier/web_rag.git
+cd web_rag
 ```
 
 2. **Start the Services**
@@ -49,8 +49,8 @@ Once the services are up, open [http://localhost:8081](http://localhost:8081) in
 1. **Clone the Repository**
 
 ```bash
-git clone <repository-url>
-cd simple_rag
+git clone https://github.com/ThomasRanvier/web_rag.git
+cd web_rag
 ```
 
 2. **Running the Backend API**
